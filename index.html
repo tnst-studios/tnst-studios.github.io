@@ -1,0 +1,141 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Oswald">
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="styles/main.css">
+        <title>TNST Studios</title>
+    </head>
+
+    <body>   
+        <div class="container">
+
+            <div id="header">
+                <h1 id="logo" class="text-uppercase fadeFast">Tnst studios</h1>
+                <div id="navDiv" class="fade">
+                    <a href="#projects" class="pageScroll links text-uppercase">Projects</a>
+                    |
+                    <a href="#aboutUs" class="pageScroll links text-uppercase">About us</a> 
+                    |
+                    <a href="#footer" class="pageScroll links text-uppercase">Contact</a>
+                    |
+                    <a href="policy.html" class="links text-uppercase">Privacy Policy</a>
+                </div>
+            </div>
+
+            <div id="headline" class="card fade homeOnly">
+                <img src="images/background.png" class="card-img">
+                <div class="card-img-overlay d-flex flex-column justify-content-between">
+                    <h1 class="card-title">Knight's Journey out now on the Play Store!</h1>
+                    <a href='https://play.google.com/store/apps/details?id=tomn114.com.app&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target="_blank"><img alt='Get it on Google Play' src='images/google-play-badge.png'/></a>
+                </div>   
+            </div>
+
+            <div id="projects" class="card p-3 my-5 fade homeOnly">
+                <h1 class="card-title font-weight-bold">Projects</h1>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"> 
+                        <div class="media">
+                            <img class="appIcon rounded-circle" src="images/icon.png">
+                            <div class="media-body appDesc mx-5">
+                                <h2>Knight's Journey</h2>
+                                <p>Knight's Journey is a puzzle game with a simple objective: to get to the castle as the knight. However, the increasingly difficult levels will test 
+                                    you on how quick and efficient you can be. With intuitive controls and randomly generated levels, Knight's Journey can provide endless fun. 
+                                    Get it on the play store <a href='https://play.google.com/store/apps/details?id=tomn114.com.app' target="_blank">here.</a></p>
+                            </div>
+                        </div>
+                    </li> 
+                </ul>
+            </div>
+
+            <div id="aboutUs" class="card p-3 my-5 fade homeOnly">
+                <h1 class="card title font-weight-bold">About Us</h1>
+                <p>During the summer of 2018, two high school students decided to port their game project for a Java course in school on to the Android platform. With the release of their game
+                    project, now known as Knight's Journey, the duo rebranded to TNST Studios to better fit their aspirations of being a full fledged game development studio.</p>
+                
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="media">
+                            <img class="appIcon rounded-circle" src="images/thomas.jpg">
+                            <div class="media-body appDesc mx-5">
+                                <h2>Thomas Nguyen</h2>
+                                <p>Thomas is a senior at Monta Vista High School. He enjoys swimming and watching comedies in his free time.</p>
+                            </div>
+                        </div>
+                    </li> 
+                    <li class="list-group-item">  
+                        <div class="media">
+                            <img class="appIcon rounded-circle" src="images/stanley.jpg">
+                            <div class="media-body appDesc mx-5">
+                                <h2>Stanley Tzeng</h2>
+                                <p>Stanley is a senior at Monta Vista High School. In his leisure time he likes to go biking and take care of his cockatiels.</p>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="footer" class="fade">
+                    <p class="text-white text-center">Contact: <a href="mailto:tnststudios2019@gmail.com">tnststudios2019@gmail.com</a></p>
+                    <p class="text-white text-center mb-5">Website created by Thomas Nguyen</p>
+            </div>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+        <script type="text/javascript">
+            
+            var loaded = false;
+            
+            $(window).on("load", function(){
+                $('.fadeFast').each(function(index){
+                    $(this).css('display', 'block');
+                });
+                $('.fade').each(function(index){
+                    $(this).css('display', 'block');
+                });
+                $('.fadeFast').each(function(index){
+                    $(this).delay(250).animate({"opacity": "1"}, 1000);
+                });
+                $('.fade').each(function(index){
+                    $(this).delay(800).animate({"opacity": "1"}, 1000);
+                });
+
+
+            });
+
+            $("#header").find(".pageScroll").click(function(e){
+                e.preventDefault();
+                var section = $(this).attr("href");
+                $("html, body").animate({
+                    scrollTop: $(section).offset().top
+                }, 'slow');
+            });
+
+            $("#header").find(".switchPage").click(function(e){
+                $('.homeOnly').each(function(index){
+                    $(this).delay(400).animate({"opacity": "0"}, 1000)
+                    $(this).delay(501).css('display', 'none');
+                });
+                
+                var href = $(this).attr('href');
+                /*
+                $(href).delay(600).animate({"opacity": "1"}, 1000);
+                $(href).delay(1001).css('display', 'block');*/
+            });
+
+
+
+        </script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>   
+    </body>
+</html>

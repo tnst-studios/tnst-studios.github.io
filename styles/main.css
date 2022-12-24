@@ -1,0 +1,56 @@
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color:black;
+}
+
+.hiddenOnHome{
+    display: none;
+    opacity: 0;
+}
+
+.fadeFast{
+    display: none;
+    opacity: 0;
+}
+
+.fade{
+    display: none;
+    opacity: 0;
+}
+
+#header{
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    color: white;
+    padding: 50px;
+    font-size: 22px;
+}
+
+#logo{
+    font-size: 108px;
+    padding-bottom: 20px;
+}
+
+a.links{
+    font-size: 20px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+a.links:hover{
+    color:grey;
+    text-decoration: none;
+}
+
+.card{
+    border: none;
+}
+
+.appIcon{
+    display: inline-block;
+}
+
+.appDesc{
+    display: inline-block;
+}
